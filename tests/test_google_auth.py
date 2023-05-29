@@ -13,7 +13,8 @@ def test_scopes():
         'В файле `google_client` не обнаружена переменная `SCOPES`'
     )
     assert len(google_client.SCOPES) == 2, (
-        'Убедитесь что количество объектов в `google_client.SCOPES` равно двум.'
+        'Убедитесь что количество объектов в `google_client.SCOPES` равно '
+        'двум.'
     )
     for scope in google_client.SCOPES:
         assert any(s in scope for s in ['drive', 'spreadsheets']), (
@@ -51,5 +52,6 @@ def test_connect():
     )
     service = google_client.get_service()
     assert isinstance(service, types.AsyncGeneratorType), (
-        'Функция `google_client.get_service` должна возвращать асинхронный генератор.'
+        'Функция `google_client.get_service` должна возвращать асинхронный '
+        'генератор.'
     )
