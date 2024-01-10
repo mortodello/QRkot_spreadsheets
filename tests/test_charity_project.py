@@ -532,7 +532,7 @@ def test_patch_charity_project_usual_user(user_client):
 
 
 def test_patch_charity_project_fully_invested(
-    superuser_client, small_fully_charity_project,
+        superuser_client, small_fully_charity_project,
 ):
     response = superuser_client.patch(
         '/charity_project/1', json={'full_amount': 10}
