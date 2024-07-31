@@ -1,13 +1,9 @@
-from datetime import datetime
-
 from app.core.config import settings
 
 FORMAT = "%Y/%m/%d %H:%M:%S"
 
-now_date_time = datetime.now().strftime(FORMAT)
-
 SPREADSHEET_BODY = {
-    'properties': {'title': f'Отчёт от {now_date_time}',
+    'properties': {'title': 'Отчёт от ',
                    'locale': 'ru_RU'},
     'sheets': [{'properties': {'sheetType': 'GRID',
                                'sheetId': 0,

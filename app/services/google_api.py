@@ -9,6 +9,8 @@ from app.services.constants import FORMAT, PERMISSIONS_BODY, SPREADSHEET_BODY
 
 async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
     service = await wrapper_services.discover('sheets', 'v4')
+    now_date_time = datetime.now().strftime(FORMAT)
+    SPREADSHEET_BODY['properties']['title'] += f'{now_date_time}'
     response = await wrapper_services.as_service_account(
         service.spreadsheets.create(json=SPREADSHEET_BODY)
     )
