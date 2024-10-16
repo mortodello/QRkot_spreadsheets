@@ -9,7 +9,7 @@
 git clone git@github.com:mortodello/cat_charity_fund.git
 ```
 - Создайте виртуальное окружение и примените зависимости из requirements.txt
-- Заплните файл .env
+- Заполните файл .env
 - Команда для запуска проекта из корня 
 ```sh
 uvicorn app.main:app
