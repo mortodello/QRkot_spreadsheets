@@ -8,7 +8,7 @@
 ```sh
 git clone git@github.com:mortodello/cat_charity_fund.git
 ```
-- Создайте виртуальное окружение и применити зависимости из requirements.txt
+- Создайте виртуальное окружение и примените зависимости из requirements.txt
 - Заплните файл .env
 - Команда для запуска проекта из корня 
 ```sh
